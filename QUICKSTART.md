@@ -7,21 +7,21 @@
 1. 打开 Chrome，访问 `chrome://extensions/`
 2. 开启右上角 **"开发者模式"**
 3. 点击 **"加载已解压的扩展程序"**
-4. 选择 `/Users/vee/project/docx-to-md-extension` 文件夹
+4. 选择 `/path/to/docx-to-md-extension` 文件夹
 
 ### 步骤 2: 启动服务器
 
 在终端运行：
 
 ```bash
-cd /Users/vee/project/docx-to-md-extension
+cd /path/to/docx-to-md-extension
 ./start_server.sh
 ```
 
 或直接运行：
 
 ```bash
-python3 /Users/vee/project/docx-to-md-extension/server.py
+python3 /path/to/docx-to-md-extension/server.py
 ```
 
 ### 步骤 3: 开始转换

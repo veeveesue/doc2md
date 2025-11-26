@@ -43,7 +43,7 @@ Error converting file: Traceback (most recent call last):
 如果选择文件夹时出错，尝试指定一个明确的输出路径：
 
 ```
-输出路径: /Users/vee/Downloads/output
+输出路径: /path/to/downloads/output
 ```
 
 #### 方案 4: 单个文件测试
@@ -57,8 +57,8 @@ Error converting file: Traceback (most recent call last):
 使用测试脚本验证服务器：
 
 ```bash
-cd /Users/vee/project/docx-to-md-extension
-python3 test_server.py /Users/vee/Downloads/test.docx
+cd /path/to/docx-to-md-extension
+python3 test_server.py /path/to/downloads/test.docx
 ```
 
 ### 问题 2: 服务器无法连接
@@ -75,7 +75,7 @@ python3 test_server.py /Users/vee/Downloads/test.docx
 lsof -i :8765
 
 # 2. 如果没有运行，启动服务器
-cd /Users/vee/project/docx-to-md-extension
+cd /path/to/docx-to-md-extension
 ./start_server.sh
 
 # 3. 如果端口被占用，使用其他端口
@@ -265,7 +265,7 @@ except Exception as e:
 使用命令行直接测试：
 
 ```bash
-cd /Users/vee/project/anylisppt
+cd /path/to/anylisppt
 python3 -c "
 from md_trans import DocxToMarkdown
 converter = DocxToMarkdown()

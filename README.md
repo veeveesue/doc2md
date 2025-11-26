@@ -41,7 +41,7 @@ pip install python-docx
 插件需要配合本地 Python 服务器使用。在终端中运行：
 
 ```bash
-cd /Users/vee/project/docx-to-md-extension
+cd /path/to/docx-to-md-extension
 python3 server.py
 ```
 
@@ -232,3 +232,8 @@ docx-to-md-extension/
 ---
 
 **Enjoy converting! 📝✨**
+
+## 🌟 Star History
+
+如果这个项目对你有帮助，欢迎 Star ⭐️
+

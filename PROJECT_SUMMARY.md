@@ -3,7 +3,7 @@
 ## 项目信息
 
 **项目名称**: DOCX to Markdown Converter Chrome Extension
-**项目路径**: `/Users/vee/project/docx-to-md-extension`
+**项目路径**: `/path/to/docx-to-md-extension`
 **创建时间**: 2025-01-26
 **版本**: 1.0.0
 
