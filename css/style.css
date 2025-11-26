@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  background: #f5f5f5;
+  width: 450px;
+  min-height: 500px;
+}
+
+.container {
+  padding: 20px;
+  background: white;
+}
+
+h1 {
+  font-size: 20px;
+  color: #1a73e8;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.section {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+/* Status Banner */
+.status-banner {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.status-indicator {
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.status-banner.connected {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-banner.disconnected {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* Input Groups */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #666;
+}
+
+.input-group input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+/* File Input */
+.file-label {
+  display: block;
+  cursor: pointer;
+}
+
+.file-label input[type="file"] {
+  display: none;
+}
+
+.file-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #1a73e8;
+  color: white;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.file-button:hover {
+  background: #1557b0;
+}
+
+.folder-button {
+  background: #34a853;
+}
+
+.folder-button:hover {
+  background: #2d8e47;
+}
+
+.file-info {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #666;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  min-height: 32px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.file-info.has-files {
+  color: #2e7d32;
+  background: #e8f5e9;
+}
+
+/* Text Input */
+.text-input {
+  width: calc(100% - 60px);
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-right: 8px;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.1);
+}
+
+/* Buttons */
+.small-button {
+  padding: 8px 12px;
+  background: #f1f3f4;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.small-button:hover {
+  background: #e8eaed;
+}
+
+.convert-button {
+  width: 100%;
+  padding: 14px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.convert-button:hover:not(:disabled) {
+  background: #1557b0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.convert-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.convert-button.converting {
+  background: #fbbc04;
+}
+
+.convert-button.success {
+  background: #34a853;
+}
+
+.convert-button.error {
+  background: #ea4335;
+}
+
+/* Progress */
+.progress-bar {
+  width: 100%;
+  height: 24px;
+  background: #f1f3f4;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1a73e8, #4285f4);
+  transition: width 0.3s ease;
+  width: 0%;
+}
+
+.progress-text {
+  font-size: 13px;
+  color: #666;
+  text-align: center;
+}
+
+/* Results */
+.results {
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 12px;
+}
+
+.result-item {
+  padding: 8px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.result-item.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.result-item.error {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.result-item .icon {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.result-item .text {
+  flex: 1;
+  word-break: break-all;
+}
+
+/* Footer */
+.footer {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+
+.footer p {
+  margin: 4px 0;
+}
+
+.footer #serverUrl {
+  font-family: "Courier New", monospace;
+  background: #f1f3f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.hint {
+  color: #999;
+  font-style: italic;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f3f4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}

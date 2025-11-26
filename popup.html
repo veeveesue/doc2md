@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOCX to Markdown Converter</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📄 DOCX → Markdown</h1>
+
+    <div class="status-banner" id="serverStatus">
+      <span class="status-indicator" id="statusIndicator">⚪</span>
+      <span id="statusText">检查服务器状态...</span>
+    </div>
+
+    <div class="section">
+      <h3>输入文件</h3>
+      <div class="input-group">
+        <label class="file-label">
+          <input type="file" id="fileInput" accept=".docx,.doc" multiple>
+          <span class="file-button">选择 DOCX 文件</span>
+        </label>
+        <div class="file-info" id="fileInfo">未选择文件</div>
+      </div>
+
+      <div class="input-group">
+        <label class="file-label">
+          <input type="file" id="folderInput" webkitdirectory directory>
+          <span class="file-button folder-button">选择文件夹</span>
+        </label>
+        <div class="file-info" id="folderInfo">未选择文件夹</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>输出设置</h3>
+      <div class="input-group">
+        <label>
+          <input type="checkbox" id="extractImages" checked>
+          提取图片到 media 文件夹
+        </label>
+      </div>
+
+      <div class="input-group">
+        <label>
+          <input type="checkbox" id="autoConvert">
+          自动转换 .doc 文件 (需要 LibreOffice)
+        </label>
+      </div>
+
+      <div class="input-group">
+        <label for="outputPath">输出路径:</label>
+        <input type="text" id="outputPath" placeholder="留空则与源文件同目录" class="text-input">
+        <button id="clearOutput" class="small-button">清空</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <button id="convertBtn" class="convert-button" disabled>
+        <span class="button-text">开始转换</span>
+      </button>
+    </div>
+
+    <div class="section" id="progressSection" style="display: none;">
+      <h3>转换进度</h3>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-text" id="progressText">0 / 0</div>
+    </div>
+
+    <div class="section" id="resultsSection" style="display: none;">
+      <h3>转换结果</h3>
+      <div class="results" id="results"></div>
+    </div>
+
+    <div class="footer">
+      <p>服务器地址: <span id="serverUrl">http://localhost:8765</span></p>
+      <p class="hint">💡 确保本地 Python 服务器正在运行</p>
+    </div>
+  </div>
+
+  <script src="js/popup.js"></script>
+</body>
+</html>
